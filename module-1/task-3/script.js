@@ -17,29 +17,36 @@
 
 const country = prompt('Укажите страну для доставки');
 
-let price = 0;
+let price;
+let messeage;
 
 switch (country.toLowerCase()) {
     case 'китай':
         price = 100;
+        messeage = `Доставка в Китай будет стоить ${price} кредитов`;
         break;
     case 'южная америка':
         price = 250;
+        messeage = `Доставка в Южную Америку будет стоить ${price} кредитов`;
         break;
     case 'австралия':
         price = 170;
+        messeage = `Доставка в Австралию будет стоить ${price} кредитов`;
         break;
     case 'индия':
         price = 80;
+        messeage = `Доставка в Индию будет стоить ${price} кредитов`;
         break;
     case 'ямайка':
         price = 120;
+        messeage = `Доставка на Ямайку будет стоить ${price} кредитов`;
         break;
     default:
         console.log('В вашей стране доставка не доступна');
+    
 }
-console.log (`Доставка в ${country} будет стоить ${price} кредитов`);
+console.log (messeage);
+// console.log (`Доставка в ${country} будет стоить ${price} кредитов`);
 // console.log (price);
 // toLowerCase() - преобразование в нижний регистр
 // .toUpperCase() - в верхний
-
