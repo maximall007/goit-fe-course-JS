@@ -10,12 +10,7 @@ let result = 0;
 const quantity = prompt('Укажите количество дроидов, которых хотите приобрести?');
 
 
-if (!quantity) {
-    const cancel = ('Отменено пользователем!');
-    console.log(cancel);
-} else if (!Number(quantity)) {
-    console.log('Введите коректное значение');
-} else {
+if (quantity !== null && Number(quantity)) {
     totalPrice = quantity * pricePerDroid;
     result = credits - totalPrice;
     if (result >= 0) {
@@ -23,6 +18,9 @@ if (!quantity) {
     } else {
         console.log('Недостаточно средств на счету!');
     }
+}else {
+    const cancel = ('Отменено пользователем!');
+    console.log(cancel);
 }
 
 
