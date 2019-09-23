@@ -24,22 +24,39 @@
 // isLoginValid только проверяет валидный ли логин и возвращает true или false.
 // addLogin добавляет или не добавляет логин в массив. При этом для проверок условия добавления использует результаты вызовов других функций - isLoginUnique и isLoginValid.
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
-const errorLogiValid = 'Ошибка! Логин должен быть от 4 до 16 символов';
+const errorLoginValid = 'Ошибка! Логин должен быть от 4 до 16 символов';
 const addLoginInArray = 'Логин успешно добавлен!';
 const inUseLogin = 'Такой логин уже используется!';
 
 const isLoginValid = function(login) {
+    if(login.length >= 4 && login.length <=16) {
+        login = true;
+    } else {
+        login = false;
+    }
+    return login
 
 };
 
 
 const isLoginUnique = function(allLogins, login) {
-  // код
-
+  if(!allLogins.includes(login)){
+      login = true;
+  } else {
+      login = false;
+  }
+  return login
 };
 
 const addLogin = function(allLogins, login) {
-  // код
+    if(!isLoginValid(login)) {
+        return errorLoginValid;
+    } else if (isLoginUnique(allLogins, login)) {
+        allLogins.push(login);
+        return addLoginInArray;
+    } else {
+        return inUseLogin;
+    }
   
 };
 
