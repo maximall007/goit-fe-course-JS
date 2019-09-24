@@ -3,15 +3,27 @@
 
 // Вызовы функции для проверки работоспособности твоей реализации.
 
-const checkForSpam = function(str) {
-    let lowerStr = str.toLowerCase();
-    let word;
-    if(lowerStr.includes('spam') || lowerStr.includes('sale')) {
-        word = true;
-    } else {
-        word = false;
-    }
-    return word
+// const checkForSpam = function(str) {
+//     // let lowerStr = str.toLowerCase();
+//     // let isFoundWord;
+//     // if(lowerStr.includes('spam') || lowerStr.includes('sale')) {
+//     //     isFoundWord = true;
+//     // } else {
+//     //     isFoundWord = false;
+//     // }
+//     // return isFoundWord
+
+//     //  ------Другой способ------
+
+//     // str.toLowerCase();
+//     // return str.includes('spam') || str.includes('sale');
+    
+// }
+
+
+const checkForSpam = str =>
+{ str.toLowerCase();
+return str.includes('spam') || str.includes('sale');
 }
 
 console.log(checkForSpam('Latest technology news')); // false

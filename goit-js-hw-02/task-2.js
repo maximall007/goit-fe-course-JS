@@ -3,21 +3,15 @@
 
 // Вызовы функции для проверки работоспособности твоей реализации.
 
-const calculateEngravingPrice = function (message, pricePerWord) {
+// const calculateEngravingPrice = function (message, pricePerWord) {
 
-    const words = message.split(" ");
-    const price = words.length * pricePerWord;
-    return price
+//     const price = message.split(' ').length * pricePerWord;
+//     return price
 
-    // ----Решение с помощью цикла----
-
-    // const words = message.split(" ");
-    // for(let i = 0; i < words.length; i += 1) {
-    //     const price = words.length * pricePerWord;
-    //     return price
-    // }
-
-}
+// }
+// ----------Стрелочная функция--------
+const calculateEngravingPrice = (message, pricePerWord) =>
+    message.split(' ').length * pricePerWord;
 
 
 console.log(calculateEngravingPrice('Proin sociis natoque et magnis parturient montes mus', 10)); // 80

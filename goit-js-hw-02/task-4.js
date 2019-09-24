@@ -6,16 +6,9 @@
 // Вызовы функции для проверки работоспособности твоей реализации.
 
 
-const formatString = function(string) {
-    // console.log(string.length);
-    let word;
-    if(string.length > 40) {
-        word = string.slice(0,40) + '...';
-    } else {
-        word = string;
-    }
-    return word;
-}
+
+const formatString = (string, value = 40) =>
+string.length > value ? `${string.slice(0, value)}...` : string;
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
 // вернется оригинальная строка

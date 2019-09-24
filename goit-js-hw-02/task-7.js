@@ -1,4 +1,3 @@
-'use strict';
 // Есть массив logins с логинами пользователей. Напиши скрипт добавления логина в массив logins. Добавляемый логин должен:
 
 // проходить проверку на длину от 4 до 16-ти символов включительно
@@ -30,23 +29,25 @@ const addLoginInArray = 'Логин успешно добавлен!';
 const inUseLogin = 'Такой логин уже используется!';
 
 const isLoginValid = function(login) {
-    if(login.length >= 4 && login.length <=16) {
-        login = true;
-    } else {
-        login = false;
-    }
-    return login
+    // if(login.length >= 4 && login.length <=16) {
+    //     login = true;
+    // } else {
+    //     login = false;
+    // }
+    // return login
+    return login.length >=4 && login.length <= 16;
 
 };
 
 
 const isLoginUnique = function(allLogins, login) {
-  if(!allLogins.includes(login)){
-      login = true;
-  } else {
-      login = false;
-  }
-  return login
+//   if(!allLogins.includes(login)){
+//       login = true;
+//   } else {
+//       login = false;
+//   }
+//   return login
+return !allLogins.includes(login);
 };
 
 const addLogin = function(allLogins, login) {
@@ -58,7 +59,6 @@ const addLogin = function(allLogins, login) {
     } else {
         return inUseLogin;
     }
-  
 };
 
 // Вызовы функции для проверки
