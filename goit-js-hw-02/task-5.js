@@ -17,13 +17,13 @@
 
 //     // str.toLowerCase();
 //     // return str.includes('spam') || str.includes('sale');
-    
+
 // }
 
 
-const checkForSpam = str =>
-{ str.toLowerCase();
-return str.includes('spam') || str.includes('sale');
+const checkForSpam = str => {
+    let foundStr = str.toLowerCase();
+    return foundStr.includes('spam') || foundStr.includes('sale');
 }
 
 console.log(checkForSpam('Latest technology news')); // false
