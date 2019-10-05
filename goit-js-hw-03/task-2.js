@@ -5,14 +5,16 @@
 
 const countProps = function (obj) {
 
-    const keys = Object.keys(obj);
+    // const keys = Object.keys(obj);
 
-    let counter = 0;
+    // let counter = 0;
 
-    for (let key of keys) {
-        counter += 1;
-    }
-    return counter
+    // for (let key of keys) {
+    //     counter += 1;
+    // }
+    // return counter
+    // ------- способ по-проще-----------
+    return (Object.keys(obj).length);
 };
 
 

@@ -16,7 +16,7 @@ const getAllPropValues = function (arrs, prop) {
     for (let arr of arrs) {
 
         if(prop in arr) {
-            values.push(arr[prop]); //если ключь с таким значением есть в обекте arr, то мы его пушим в values, если в arr окажится undefinde, if не выполнится.Это сделано,чтобы последний консол логне писал андефанд
+            values.push(arr[prop]); 
         }
         
     }
